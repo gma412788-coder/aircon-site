@@ -374,6 +374,107 @@ function closeModal(){
 </div>
 
 <style>
+.blog-box{
+  background:linear-gradient(135deg,#ffffff,#f2f6ff);
+  border-radius:16px;
+  padding:30px 20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  max-width:500px;
+  margin:0 auto;
+}
+
+.blog-title{
+  font-size:20px;
+  font-weight:900;
+  color:#1e3a5f;
+  margin-bottom:8px;
+}
+
+.blog-sub{
+  font-size:14px;
+  color:#666;
+  margin-bottom:20px;
+}
+
+.blog-btn{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+
+  background:linear-gradient(135deg,#03C75A,#00b04f);
+  color:white;
+
+  padding:16px 20px;
+  border-radius:50px;
+
+  font-size:16px;
+  font-weight:900;
+  text-decoration:none;
+
+  box-shadow:0 10px 20px rgba(0,0,0,0.15);
+  transition:0.25s;
+  position:relative;
+  overflow:hidden;
+}
+
+.blog-btn:hover{
+  transform:translateY(-3px) scale(1.02);
+  box-shadow:0 15px 25px rgba(0,0,0,0.25);
+}
+
+/* 반짝 효과 */
+.blog-btn::after{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.5),
+    transparent
+  );
+  transition:0.6s;
+}
+
+.blog-btn:hover::after{
+  left:100%;
+}
+
+/* 움직이는 포인트 */
+.blog-dot{
+  width:10px;
+  height:10px;
+  background:white;
+  border-radius:50%;
+  animation:pulseDot 1.5s infinite;
+}
+
+@keyframes pulseDot{
+  0%{transform:scale(1); opacity:1;}
+  50%{transform:scale(1.6); opacity:0.5;}
+  100%{transform:scale(1); opacity:1;}
+}
+</style>
+
+<div class="section">
+  <div class="blog-box">
+
+    <div class="blog-title">📸 실제 청소 후기 확인</div>
+    <div class="blog-sub">전후 사진 · 고객 후기 지금 바로 확인하세요</div>
+
+    <a href="https://blog.naver.com/sikiinhong" target="_blank" class="blog-btn">
+      <span class="blog-dot"></span>
+      블로그 후기 보러가기 →
+    </a>
+
+  </div>
+</div>
+
+<style>
 .map-box{
   background:linear-gradient(135deg,#ffffff,#f2f6ff);
   border-radius:16px;
